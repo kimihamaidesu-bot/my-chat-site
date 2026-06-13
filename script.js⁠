@@ -1,0 +1,37 @@
+function addMessage() {
+  const nameInput = document.getElementById("nameInput");
+  const passInput = document.getElementById("passInput");
+  const msgInput = document.getElementById("msgInput");
+  const msgContainer = document.getElementById("messages");
+  
+  let name = nameInput.value.trim() || "匿名さん";
+  const text = msgInput.value.trim();
+  const isAdmin = (passInput.value === "2525kumasann"); // パスワード設定
+
+  if (!text) return;
+
+  const div = document.createElement("div");
+  div.className = "message";
+  div.innerHTML = `
+    <div>
+      <div style="font-size: 11px; color: ${isAdmin ? '#f9d77a' : '#aaa'}; font-weight: bold;">
+        ${isAdmin ? '👑 ' : ''}${name}
+      </div>
+      <div>${text}</div>
+    </div>
+    <span class="delete-btn" onclick="this.parentElement.remove()">×</span>
+  `;
+  
+  msgContainer.appendChild(div);
+  msgInput.value = "";
+  msgContainer.scrollTop = msgContainer.scrollHeight;
+}
+
+function addRoom() {
+  const roomName = prompt("新しい部屋の名前を入力してください");
+  if (roomName) {
+    const li = document.createElement("li");
+    li.textContent = roomName;
+    document.getElementById("roomList").appendChild(li);
+  }
+}
