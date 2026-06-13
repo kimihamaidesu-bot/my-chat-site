@@ -6,7 +6,7 @@ function addMessage() {
   
   let name = nameInput.value.trim() || "匿名さん";
   const text = msgInput.value.trim();
-  const isAdmin = (passInput.value === "2525kumasann"); // パスワード設定
+  const isAdmin = (passInput.value === "secret");
 
   if (!text) return;
 
