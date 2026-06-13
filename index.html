@@ -1,28 +1,35 @@
-head>
-  <link rel="stylesheet" href="style.css"> </head>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>韓国風チャットサイト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <script src="script.js"></script> </body>
-<div class="app-container">
-  <aside class="sidebar">
-    <div class="brand">Chat Room</div>
-    <ul class="room-list" id="roomList">
-      <li class="active">🌸 一般チャット</li>
-    </ul>
-    <button class="add-btn" onclick="addRoom()">+ 部屋を追加</button>
-  </aside>
-  
-  <main class="chat-main">
-    <div class="chat-header" id="currentRoom">一般チャット</div>
-    <div id="messages" class="chat-messages"></div>
-    <div class="chat-input-area">
-      <div class="input-row">
-        <input type="text" id="nameInput" placeholder="お名前 (9文字)" maxlength="9">
-        <input type="password" id="passInput" placeholder="Pass (主のみ)" style="width: 80px;">
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="brand">Chat Room</div>
+      <ul class="room-list" id="roomList">
+        <li class="active">🌸 一般チャット</li>
+      </ul>
+      <button class="add-btn" onclick="addRoom()">+ 部屋を追加</button>
+    </aside>
+    
+    <main class="chat-main">
+      <div class="chat-header" id="currentRoom">一般チャット</div>
+      <div id="messages" class="chat-messages"></div>
+      <div class="chat-input-area">
+        <div class="input-row">
+          <input type="text" id="nameInput" placeholder="お名前 (9文字)" maxlength="9">
+          <input type="password" id="passInput" placeholder="Pass (主のみ)" style="width: 80px;">
+        </div>
+        <div class="input-row">
+          <input type="text" id="msgInput" placeholder="メッセージを入力...">
+          <button onclick="addMessage()" class="send-btn">送信</button>
+        </div>
       </div>
-      <div class="input-row">
-        <input type="text" id="msgInput" placeholder="メッセージを入力...">
-        <button onclick="addMessage()" class="send-btn">送信</button>
-      </div>
-    </div>
-  </main>
-</div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
