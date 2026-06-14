@@ -1,14 +1,19 @@
 function addMessage() {
+  alert("送信ボタンが押されました！");
+  
   const msgInput = document.getElementById("msgInput");
   const msgContainer = document.getElementById("messages");
-  if (!msgInput.value) return;
+  
+  if (!msgInput.value) {
+    alert("メッセージが空です！");
+    return;
+  }
+  
   const div = document.createElement("div");
   div.textContent = msgInput.value;
   div.style.padding = "10px";
   div.style.borderBottom = "1px solid #eee";
   msgContainer.appendChild(div);
+  
   msgInput.value = "";
-}
-function addRoom() {
-  alert("部屋を追加しました！");
 }
