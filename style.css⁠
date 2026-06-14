@@ -1,21 +1,15 @@
-body { margin: 0; font-family: sans-serif; background: #fffdf0; color: #555; }
+body { margin: 0; font-family: sans-serif; background: #fffdf0; }
 .app-container { display: flex; height: 100vh; }
-
-.sidebar { width: 30%; background: #ffffff; border-right: 1px solid #fdf6d0; padding: 20px; }
-.brand { font-weight: bold; color: #f9d77a; font-size: 1.2rem; margin-bottom: 20px; }
+.sidebar { width: 30%; background: #fff; border-right: 1px solid #eee; padding: 20px; }
+.brand { font-weight: bold; color: #f9d77a; margin-bottom: 20px; }
 .room-list { list-style: none; padding: 0; }
-.room-list li { padding: 10px; cursor: pointer; border-radius: 8px; margin-bottom: 5px; }
-.room-list li.active { background: #fffbeb; color: #e6b800; font-weight: bold; }
-.add-btn { width: 100%; margin-top: 20px; padding: 10px; border: none; background: #fdf6d0; color: #d4a017; border-radius: 10px; cursor: pointer; }
-
+.room-list li { padding: 10px; cursor: pointer; border-radius: 8px; }
+.room-list li.active { background: #fffbeb; color: #e6b800; }
+.add-btn { width: 100%; margin-top: 20px; padding: 10px; background: #fdf6d0; border: none; border-radius: 10px; }
 .chat-main { width: 70%; display: flex; flex-direction: column; }
-.chat-header { padding: 20px; background: #ffffff; border-bottom: 1px solid #fdf6d0; font-weight: bold; }
+.chat-header { padding: 20px; background: #fff; border-bottom: 1px solid #eee; }
 .chat-messages { flex: 1; padding: 20px; overflow-y: auto; }
-.message { background: #ffffff; border: 1px solid #fffdf0; padding: 12px; margin-bottom: 10px; border-radius: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 2px 2px 5px rgba(0,0,0,0.03); }
-
 .chat-input-area { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
 .input-row { display: flex; gap: 10px; }
-#nameInput, #passInput { padding: 8px; border: 1px solid #fdf6d0; border-radius: 10px; }
-#msgInput { flex: 1; padding: 10px; border: 1px solid #fdf6d0; border-radius: 20px; outline: none; }
-.send-btn { padding: 10px 20px; border: none; background: #f9d77a; color: white; border-radius: 20px; cursor: pointer; }
-.delete-btn { color: #ffcccc; cursor: pointer; font-size: 14px; margin-left: 10px; }
+input { padding: 8px; border: 1px solid #ddd; border-radius: 10px; }
+.send-btn { padding: 10px 20px; background: #f9d77a; border: none; border-radius: 20px; color: white; }
