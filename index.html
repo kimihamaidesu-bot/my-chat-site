@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>韓国風チャットサイト</title>
+  <title>Chat</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,17 +14,16 @@
       </ul>
       <button class="add-btn" onclick="addRoom()">+ 部屋を追加</button>
     </aside>
-    
     <main class="chat-main">
       <div class="chat-header" id="currentRoom">一般チャット</div>
       <div id="messages" class="chat-messages"></div>
       <div class="chat-input-area">
         <div class="input-row">
-          <input type="text" id="nameInput" placeholder="お名前 (9文字)" maxlength="9">
-          <input type="password" id="passInput" placeholder="Pass (主のみ)" style="width: 80px;">
+          <input type="text" id="nameInput" placeholder="お名前" maxlength="9">
+          <input type="password" id="passInput" placeholder="Pass">
         </div>
         <div class="input-row">
-          <input type="text" id="msgInput" placeholder="メッセージを入力...">
+          <input type="text" id="msgInput" placeholder="メッセージ...">
           <button onclick="addMessage()" class="send-btn">送信</button>
         </div>
       </div>
